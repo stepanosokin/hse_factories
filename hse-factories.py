@@ -64,7 +64,10 @@ def download_factories(pages=1200):
                             people_tag = factory_txt_tag.find(attrs={"class": "factory__people content-list__title"})
                             if people_tag:
                                 factory_dict['people'] = people_tag.text
-                            factory_dict['text'] = factory_txt_tag.find('p').text
+                            if factory_txt_tag.find('p'):
+                                factory_dict['text'] = factory_txt_tag.find('p').text
+                            elif factory_txt_tag.text:
+                                factory_dict['text'] = factory_txt_tag.text
                         factory_categories_tags = factory_teaser.find(attrs={"class": "factory__category"}).find_all('li')
                         if factory_categories_tags:
                             factory_dict['categories'] = ', '.join([x.find('a').text for x in factory_categories_tags if x.find('a')])
