@@ -316,4 +316,4 @@ def download_factories(pages=1200):
 
 
 if __name__ == "__main__":
-    download_factories(pages=1)
+    download_factories(pages=1200)
