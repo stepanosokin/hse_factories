@@ -8,4 +8,8 @@ dependencies = [
     "beautifulsoup4>=4.13.4",
     "requests>=2.32.4",
     "shapely>=2.1.1",
+    "vgdb-general",
 ]
+
+[tool.uv.sources]
+vgdb-general = { git = "https://github.com/stepanosokin/vgdb_general.git" }
