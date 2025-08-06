@@ -12,4 +12,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-vgdb-general = { git = "https://github.com/stepanosokin/vgdb_general.git" }
+vgdb-general = { git = "https://github.com/stepanosokin/vgdb_general.git#egg=vgdb_general" }
